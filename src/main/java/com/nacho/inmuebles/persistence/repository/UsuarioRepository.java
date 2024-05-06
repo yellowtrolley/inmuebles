@@ -8,4 +8,5 @@ import java.util.List;
 public interface UsuarioRepository extends JpaRepository<Usuario, Long> {
     List<Usuario> findByNombreLike(String nombre);
     Usuario findByEmail(String email);
+    boolean existsByEmail(String email);
 }

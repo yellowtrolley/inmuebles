@@ -38,6 +38,7 @@ public class UsuarioController {
     @PostMapping("/adduser")
     public String addUser(@Valid Usuario user, BindingResult result, Model model) {
         if (result.hasErrors()) {
+            model.addAttribute("user", user);
             return "add-user";
         }
         
